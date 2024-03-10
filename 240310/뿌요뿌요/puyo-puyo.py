@@ -27,6 +27,7 @@ def dfs(val, y, x):
     return cnt
 
 ans = []
+booms = 0
 for i in range(N):
     for j in range(N):
         if board[i][j]:
@@ -34,9 +35,9 @@ for i in range(N):
             val = board[i][j]
             dfs(val, i, j)
             if cnt > 3:
-                ans.append([cnt, val])
+                ans.append(cnt)
+                booms += 1
             else:
-                ans.append([cnt, 0])
-
+                ans.append(cnt)
 ans.sort()
-print(f"{ans[-1][1]} {ans[-1][0]}")
+print(f"{booms} {ans[-1]}")
