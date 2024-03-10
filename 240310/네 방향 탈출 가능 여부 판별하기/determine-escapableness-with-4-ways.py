@@ -9,7 +9,7 @@ board = []
 for i in range(N):
     board.append(list(map(int, input().split())))
 
-visited = [[False] * M for _ in range(N)]
+visited = [[0] * M for _ in range(N)]
 
 #(y, x)
 directions = [(0, 1), (-1, 0), (0, -1), (1, 0)]
