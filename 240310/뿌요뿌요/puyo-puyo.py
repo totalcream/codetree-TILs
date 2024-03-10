@@ -2,7 +2,7 @@ from sys import stdin, setrecursionlimit
 input = stdin.readline
 
 N = int(input())
-setrecursionlimit(10**9)
+setrecursionlimit(10**8)
 
 board = []
 
